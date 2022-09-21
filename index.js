@@ -9,3 +9,9 @@ const port = process.env.PORT || 5000
 const app = express()
 
 app.use(express.json())
+
+app.post('/register', (req, res) => res.status(200)).send('Registered')
+
+app.listen(port, () => {
+    console.log('Docked at port', + port)
+})
